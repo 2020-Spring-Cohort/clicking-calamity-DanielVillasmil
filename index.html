@@ -14,35 +14,32 @@
 </header>
 
 <body>
-   
-
-    <!-- <script> 
-        let clicks = 0;
-        function countClick(){
-            clicks++;
-        document.getElementById('llama').innerHTML = clicks
-        }
-    </script> -->
     
+    <button onClick="save()"> Save</button>
+    <button onClick="load()"> Load</button>
+    <button onClick="reset()"> Reset</button>
+
+
 
     <div class="container">
-        <div class="container__image">
+        <div class="container__image"> 
             <h1 id="llama">0</h1>
-            <img src="./src/img/984dac039c9fa22efa0cd312a3ef1754.gif" onClick="countClick()" alt="this is a gif of a space llama" width="300px" height="auto"> 
+            <h2>Llamas bought</h1> 
+            <a href= "#" onClick="countClick()"><img src="./src/img/984dac039c9fa22efa0cd312a3ef1754.gif"  alt="this is a gif of a space llama" width="300px" height="auto"></a> 
         </div>
     </div>
 
     <div class="container__left">
         <div class="first_companion">
-            <h1 id="grass">0</h1>
-            <img src="./src/img/grasss.png" onClick="countClick2()" alt="this is a grass image" width="100px" height="auto">
+            <p>Buy click companion</p>
+            <a href="#" onClick="clickCompanion()"><img src="./src/img/grasss.png" alt="this is a grass image" width="100px" height="auto"></a>
+            <h1 id="costCompanion">100</h1>
+            <h1 id="autoClickAmount">You own 0 grass</h1>
         </div>
     
     </div>
     
     <script src="/src/js/app.js"></script>
-
-    <!-- <button type="button" onClick="countClick()"> Click me!</button> -->
 
 
 </body>
