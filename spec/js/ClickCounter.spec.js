@@ -30,11 +30,29 @@ describe("Clicking calamity Tests:", () => {
                 expect(underTest.getCompanionCount()).toBe(1); 
             });
         });
-        describe('clicking companion will go up on cost by 10% ', () => {
-            it('Companion will cost 10% more after buying one time')
-            
-            
+        describe('buying companion will substract 100 from total clickCount', ()=>{
+        it('clickCount should substract 100 when companion is bought', () =>{
+            for (let i = 0; i > 100 ; i - 100) {
+                underTest.countClick();
+            }
+            underTest.purchaseCompanion();
+            expect(underTest.clickCount).toBe('');
+            });
         });
+        
     });
 
 });
+
+
+
+
+
+// describe('clicking companion will go up on cost by 10% ', () => {
+        //     it('Companion will cost 10% more after buying one time')
+        //         underTest.countClick();
+        //         underTest.purchaseCompanion() * 0.10;
+        //         expect(underTest.getCompanionCount()).toBe(110);
+
+            
+        // });

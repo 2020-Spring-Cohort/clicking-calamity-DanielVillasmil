@@ -5,13 +5,13 @@ class clickCount{
 
     }
     countClick(){
-        this.clickCount++;
+        Math.round(this.clickCount++);
     }
     getCompanionCount(){
         return 0;
     }
     getCompanionCount(){
-        return this.companionCount;
+        return Math.round(this.companionCount);
     }
     purchaseCompanion(){
         if(this.clickCount >= 100){
@@ -20,4 +20,10 @@ class clickCount{
         }
 
     }
+
 }
+
+
+
+
+
