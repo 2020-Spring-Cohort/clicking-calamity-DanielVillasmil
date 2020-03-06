@@ -10,34 +10,46 @@
 
 
 <header>
-    <h1>Llama World</h1>
+    <h1>Welcome To The Llama Clicker</h1>
+
+    <div class="topnav">
+        <a href="#"><h3>About Us</h3>
+            <!-- <p>Welcome to the Llama farm field.</p>
+            <p>This is a clicking game where buying Llamas is crucial to the salvation of the planet!</p></a> -->
+        <a href="#" onClick="save()">Save</a>
+        <a href="#"onClick="load()">Load</a>
+        <a href="#"onClick="reset()">Reset
+      </div>
 </header>
 
 <body>
-    
-    <button onClick="save()"> Save</button>
-    <button onClick="load()"> Load</button>
-    <button onClick="reset()"> Reset</button>
-
 
     <div class="container">
         <div class="container__image__left"> 
             <h1 id="llama">0</h1>
-            <h2>Llamas bought</h1> 
-            
-                <a href= "#" onClick="countClick()"><img src="./src/img/984dac039c9fa22efa0cd312a3ef1754.gif"  alt="this is a gif of a space llama" width="300px" height="auto"></a> 
-            
+            <p id="llamasPerSecond">0 llamas per second</p>
+            <h2>Llamas bought</h2> 
+                <a href= "#" onClick="countClick()"><img src="./src/img/giphy.gif"  alt="this is a gif of a llama changing colors while jumping" width="300px" height="auto"></a> 
             </div>
     </div>
+    <br><br>
 
     <div class="container__center">
+        <div class="multipliyer">
+            <h3 id="clickMultiplier">Get upgrade x2</h3>
+            <p id="costMultiplier">Cost: 200 llamas</p>
+            <a href="#" onClick='buyMultiplier()'>
+                <img src="./src/img/Powerupicon.png" alt="this is a upward yellow arrow" width="50px" height="auto">
+                <p id="clickMultiplier2"><span>x2</span></p>
+            </a>
+            <p id="currentMultiplier">You current multiplier is x1</p> 
+
+        </div>
         <div class="first_companion">
-            <p>Click Companion costs 100</p>
-           
+            <h2>Click Companion</h2>
+            <p id="costCompanion">Cost: 100 llamas</p>
                 <a href="#" onClick="clickCompanion()"><img src="./src/img/grasss.png" alt="this is a grass image" width="100px" height="auto"></a>
-            
-                <h1 id="costCompanion"> Llamas</h1>
-            <h1 id="autoClickAmount">You have 0 grass</h1>
+            <p id="autoClickAmount">You have 0 grass</p>
         </div>
     
     </div>
