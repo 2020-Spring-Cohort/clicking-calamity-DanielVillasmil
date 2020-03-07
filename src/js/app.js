@@ -1,6 +1,22 @@
+function openMenu(x){
+    x.classList.toggle('change');
+}
+
+function openAlert(){
+    alert("Coo Coo Computing Challengers We are a company who focuses on making click based games. Which are perfect for unwinding from a long day or just waiting for your flight to board.");
+}
+
+
+
+
+
+
+
+
 let llamaCount = 0;
 let autoClick = 0;
 let multiplier = 1;
+let companionCost = 100;
 
 function update() {
 
@@ -8,23 +24,13 @@ function update() {
     document.title = llamaCount + 'Llamas';
     document.getElementById('clickMultiplier').innerHTML = 'Get upgrade x' + (multiplier + 1);
     document.getElementById('clickMultiplier2').innerHTML = 'x' + (multiplier + 1);
-    document.getElementById('costMultiplier').innerHTML = "Cost: " + ((multiplier + 1) * 100) + ' llamas';
+    document.getElementById('costMultiplier').innerHTML = 'Cost: ' + ((multiplier + 1) * 100) + ' llamas';
     document.getElementById('currentMultiplier').innerHTML = 'You current multiplier is x' + (multiplier);
-    document.getElementById('autoClickAmount').innerHTML = "You have " + autoClick + " grass";
-    document.getElementById('costCompanion').innerHTML = "Cost: " + ((autoClick + 1) * 100) + " llamas";
-    document.getElementById('llamasPerSecond').innerHTML = (autoClick * multiplier) + " llamas per second"
+    document.getElementById('autoClickAmount').innerHTML = 'You have ' + autoClick + ' grass';
+    document.getElementById('costCompanion').innerHTML = 'Cost: ' + (companionCost) + ' llamas';
+    document.getElementById('llamasPerSecond').innerHTML = (autoClick * multiplier) + ' llamas per second'
 }
 
-
-// timer 1000ms (one second)//
-function timer() {
-    llamaCount = llamaCount + autoClick * multiplier;
-    update();
-}
-setInterval(timer, 1000);
-
-
-//CLicks by one//
 function countClick() {
     llamaCount = llamaCount + 1;
     document.getElementById('llama').innerText = llamaCount;
@@ -49,9 +55,16 @@ function clickCompanion() {
     if (llamaCount >= ((autoClick + 1) * 100)) {
         llamaCount = llamaCount - ((autoClick + 1) * 100);
         autoClick = autoClick + 1;
+        companionCost = companionCost + Math.round(companionCost * 0.10);
+
         update();
     }
 }
+function timer() {
+    llamaCount = llamaCount + autoClick * multiplier;
+    update();
+}
+setInterval(timer, 1000);
 
 function buyMultiplier() {
     if (llamaCount >= ((multiplier + 1) * 100)) {
@@ -61,17 +74,30 @@ function buyMultiplier() {
     }
 }
 
-function openCompanyInfo() {
-    let i, tabcontent, tablinls;
-    tabcontent = document.getElementById("tabcontent");
-    for( i = 0; i < tabcontent.lenght; i++){
-        tabcontent[i].style.display = 'none';
-    }
-    tablinks = document.getElementById('tablink');
-    for(i = 0; i < tablinks.lenght; i++) {
-        tablinks[i].style.backgroundColor = '';
-    }
-    document.getElementById('defaultOpen').style.display = 'block';
-    Element.style.backgroundColor = blue;
-}  
-document.getElementById("defaultOpen").click();
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function openCompanyInfo() {
+//     let i, tabcontent, tablinls;
+//     tabcontent = document.getElementById("tabcontent");
+//     for( i = 0; i < tabcontent.lenght; i++){
+//         tabcontent[i].style.display = 'none';
+//     }
+//     tablinks = document.getElementById('tablink');
+//     for(i = 0; i < tablinks.lenght; i++) {
+//         tablinks[i].style.backgroundColor = '';
+//     }
+//     document.getElementById('defaultOpen').style.display = 'block';
+//     Element.style.backgroundColor = blue;
+// }  
+// document.getElementById("defaultOpen").click();

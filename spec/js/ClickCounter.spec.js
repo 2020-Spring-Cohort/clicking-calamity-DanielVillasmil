@@ -1,4 +1,4 @@
-describe("Clicking calamity Tests:", () => {
+describe('Clicking calamity Tests:', () => {
     let underTest;
 
     beforeEach(() => {
@@ -39,13 +39,37 @@ describe("Clicking calamity Tests:", () => {
             expect(underTest.clickCount).toBe('');
             });
         });
+         // it("ClickCount should be able to purchase more clicking companions.",() =>{
+        //     for (let i = 0; i<220; i++){
+        //         underTest.countClick()
+        //     }
+        //     underTest.purchaseCompanion()
+        //     underTest.purchaseCompanion()
+        //     expect(underTest.getCompanionCount()).toBe(2);
+        //  });
+        // it("the cost of purchase companion goes up by 10%.",() =>{
+        //     for (let i = 0; i<100; i++){
+        //         underTest.countClick()
+        //     }
+        //     underTest.purchaseCompanion()
+        //     expect(underTest.companionCost).toBe(Math.round(100 * 1.1));
+        
+        //  });
+        //  it("The cost of each Clicking Companion will go up with each purchase by 10%.",() =>{
+             
+        //     for (let i = 0; i<210; i++){
+        //         underTest.countClick();
+        //     } 
+        //         underTest.purchaseCompanion()
+        //         underTest.purchaseCompanion()
+        //         expect(underTest.clickCount).toBe(0);
+        //         expect(underTest.companionCost).toBe(121);
+           
+        //  })
         
     });
 
 });
-
-
-
 
 
 // describe('clicking companion will go up on cost by 10% ', () => {
@@ -56,3 +80,6 @@ describe("Clicking calamity Tests:", () => {
 
             
         // });
+
+
+       

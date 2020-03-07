@@ -7,23 +7,23 @@ You have been contracted by Coo Coo Computing Challengers to take a concept, Cli
 
 ## The Application Requirements
 - [ ] You must create a website that tracks the amount of times the clicking button has been clicked.
-    - [ ] Create a button in the browser to click.
-    - [ ] Create a section on the page that interacts with the _'Clicking Companions'_.
-      - [ ] Displays the amount of _Clicking Companions_ purchased.
-      - [ ] Provides a button to purchase _Clicking Companions_.
-      - [ ] Button is disabled when you do not have enough clicks to buy a _Clicking Companion_.
+    - [X] Create a button in the browser to click.
+    - [X] Create a section on the page that interacts with the _'Clicking Companions'_.
+      - [X] Displays the amount of _Clicking Companions_ purchased.
+      - [ X Provides a button to purchase _Clicking Companions_.
+      - [X] Button is disabled when you do not have enough clicks to buy a _Clicking Companion_.
     - [ ] Create a section on the page that interacts with the _'Collective Culmination Compounder'_.
       - [ ] Displays the amount of _Collective Culmination Compounder_ purchased.
       - [ ] Provides a button to purchase _Collective Culmination Compounder_.
       - [ ] Button is disabled when you do not have enough clicks to buy a _Collective Culmination Compounder_.
-- [ ] Have a function that returns the click count.
-- [ ] You must implement a feature called _'Clicking Companions'_.
-    - [ ] _Clicking Companions_ are bought with clicks from your click total.
+- [X] Have a function that returns the click count.
+- [X] You must implement a feature called _'Clicking Companions'_.
+    - [X] _Clicking Companions_ are bought with clicks from your click total.
     - [ ] Each _Clicking Companion_ that is purchased increases the cost of the next _Clicking Companion_.
-    - [ ] The initial cost should be around 100 clicks.
+    - [X] The initial cost should be around 100 clicks.
     - [ ] For each _Clicking Companion_ that has been purchased the count of clicks goes up by one every second.  This is a cumulative effect, so having 100 _Clicking Companions_ would result in having 100 clicks automatically added to the total every second.
-      - [ ] Have a function that adds the amount of _Clicking Companions_ to the click total.
-      - [ ] Inside your game loop, call the above function every second.
+      - [X] Have a function that adds the amount of _Clicking Companions_ to the click total.
+      - [X] Inside your game loop, call the above function every second.
 - [ ] You must implement a feature called _'Collective Culmination Compounders'_.
   - [ ] _Collective Culmination Compounders_ are bought with clicks from your click total.
   - [ ] Each _Collective Culmination Compounder_ that is purchased increases the cost of the next _Collective Culmination Compounder_.
@@ -40,29 +40,6 @@ You have been contracted by Coo Coo Computing Challengers to take a concept, Cli
       - [ ] The inspiration for this game, Cookie Clicker.
       - [ ] Your contact info.
   - [ ] Deploy your project so that it is reachable on the internet.
-
-## Iterations
-Each iteration will focus on building out a part ot the game.  The first iterations will focus on the logic that is needed to have a game.  The latter will take us into linking the JavaScript into our website.
-
-### Iteration 1
-
-This iteration covers project setup and starting the creation of the game.  Are first iterations are going to focus on the logic that is needed to have a game.  The JavaScript for this iteration will be solely in a ClickCounter.js file and not pertain to the html page.  We need to code some behavior before we can code the way the user interacts with the project.
-
-#### FEATURE : Use Test Driven Development to create this game.
-> As a developer, I want to use TDD to create this game, so that I know it is working as intended.
-- Create a ClickCounter.spec.js file in the `/spec/js` folder.
-- Create and set up a Jasmine spec runner for ClickCounter.js.
-
-#### FEATURE : Have a way to count clicks.
-> As a user, I want to know how many clicks I have clicked, so that I know what my score is.
-- Can record a click.
-- Can retrieve a click count.
-
-#### FEATURE : Be able to purchase the first _Clicking Companion_ with 100 clicks from your click count.
-> As a user, I want to be able to purchase _Clicking Companions_, so that I don't have to keep clicking a button all day.
-- Can retrieve a _Clicking Companion_ count.
-- Can add to the _Clicking Companion_ count.
-- Subtract the amount of the _Clicking Companion_ cost from your click count.
 
 #### FEATURE : The cost of each _Clicking Companion_ will go up with each purchase.
 > As a game designer, I want the game to become more difficult as the game progresses, so that users will continue to play the game.
