@@ -10,14 +10,13 @@ let companionCost = 100;
 
 
 function update() {
-
     document.getElementById('llama').innerText = Math.round(llamaCount);
     document.title = Math.round(llamaCount) + ' Llamas';
     document.getElementById('costMultiplier').innerHTML = 'Cost: ' + collectiveCompaunderCost + ' llamas';
     document.getElementById('currentMultiplier').innerHTML = 'You current multiplier is x' + collectiveCompaunderClick;
     document.getElementById('autoClickAmount').innerHTML = 'You have ' + autoClick + ' grass';
     document.getElementById('costCompanion').innerHTML = 'Cost: ' + (companionCost) + ' llamas';
-    document.getElementById('llamasPerSecond').innerHTML = (autoClick * multiplier) + ' llamas per second'
+    document.getElementById('llamasPerSecond').innerHTML = (autoClick * multiplier) + ' llamas per second';
 }
 
 function countClick() {
@@ -48,7 +47,7 @@ function reset() {
 function clickCompanion() {
     if (llamaCount >= llamaCount) {
         llamaCount = llamaCount - companionCost;
-        autoClick = autoClick + 1;
+        autoClick++;
         companionCost += Math.round(companionCost * 0.10);
         update();
     }
@@ -64,7 +63,7 @@ setInterval(timer, 1000);
 function buyMultiplier() {
     if (llamaCount >= collectiveCompaunderCost) {
         llamaCount = llamaCount - collectiveCompaunderCost;
-        collectiveCompaunderClick = collectiveCompaunderClick + 1;
+        collectiveCompaunderClick++;
         collectiveCompaunderCost += Math.round(collectiveCompaunderCost * priceMultiplier);
         power++;
         llamaCount += value;
