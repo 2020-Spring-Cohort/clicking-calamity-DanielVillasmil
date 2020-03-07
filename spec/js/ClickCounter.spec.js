@@ -1,85 +1,45 @@
-describe('Clicking calamity Tests:', () => {
-    let underTest;
+class ClickCounter {
+    llamaCount = 0;
+    autoClick = 0;
+    multiplier = 1.0;
+    companionCost = 100;
+    priceMultiplier = 10;
+    multiplierPricePercentage = 1.1;
+    multiplierCount = 0;
 
-    beforeEach(() => {
-        underTest = new clickCount();
-    });
-
-    describe('countClick() records clicks and clickCount returns clickCount', () => {
-        it('countClick() 1 time should return clickCount 1.', () => {
-            underTest.countClick();
-            expect(underTest.clickCount).toBe(1);
-        });
-        it('countClick() 2 times should return clickCount 2', () => {
-            underTest.countClick();
-            underTest.countClick();
-            expect(underTest.clickCount).toBe(2);
-        });
-    });
-
-    describe('Clicking Companions:', () => {
-        it('clickCounter should have 0 when new', () => {
-            expect(underTest.getCompanionCount()).toBe(0);
-        });
-        describe('clicking companion should have 1 when clickCount is 100', () => {
-            it('should go 1 when clicked', () => {
-                for (let i = 0; i < 100; i++) {
-                    underTest.countClick();
-                }
-                underTest.purchaseCompanion();
-                expect(underTest.getCompanionCount()).toBe(1); 
-            });
-        });
-        describe('buying companion will substract 100 from total clickCount', ()=>{
-        it('clickCount should substract 100 when companion is bought', () =>{
-            for (let i = 0; i > 100 ; i - 100) {
-                underTest.countClick();
+    increaseClickCount() {
+        this.llamaCount += this.multiplier;
+        return this.llamaCount;
+    }
+    autoClicks() {
+        for (let i = 0; i < this.autoClick; i++) {
+            this.increaseClickCount();
+        }
+    }
+    increaseAutoClicks() {
+        if (this.llamaCount >= this.companionCost.toFixed(0)) {
+            this.autoClick++;
+            this.llamaCount -= this.companionCost;
+            this.companionCost *= 1.1 + (0.1 * (this.autoClick - 1));
+            return this.autoClick
+        } else {
+            return this.autoClick
+        }
+    }
+    increaseMultiplier() {
+        if (this.llamaCount >= this.priceMultiplier.toFixed(0)) {
+            this.multiplierCount++;
+            if (this.multiplier === 1.0) {
+                this.multiplier += 0.2;
+            } else {
+                this.multiplier = Math.pow(1.2, this.multiplierCount);
             }
-            underTest.purchaseCompanion();
-            expect(underTest.clickCount).toBe('');
-            });
-        });
-         // it("ClickCount should be able to purchase more clicking companions.",() =>{
-        //     for (let i = 0; i<220; i++){
-        //         underTest.countClick()
-        //     }
-        //     underTest.purchaseCompanion()
-        //     underTest.purchaseCompanion()
-        //     expect(underTest.getCompanionCount()).toBe(2);
-        //  });
-        // it("the cost of purchase companion goes up by 10%.",() =>{
-        //     for (let i = 0; i<100; i++){
-        //         underTest.countClick()
-        //     }
-        //     underTest.purchaseCompanion()
-        //     expect(underTest.companionCost).toBe(Math.round(100 * 1.1));
-        
-        //  });
-        //  it("The cost of each Clicking Companion will go up with each purchase by 10%.",() =>{
-             
-        //     for (let i = 0; i<210; i++){
-        //         underTest.countClick();
-        //     } 
-        //         underTest.purchaseCompanion()
-        //         underTest.purchaseCompanion()
-        //         expect(underTest.clickCount).toBe(0);
-        //         expect(underTest.companionCost).toBe(121);
-           
-        //  })
-        
-    });
-
-});
-
-
-// describe('clicking companion will go up on cost by 10% ', () => {
-        //     it('Companion will cost 10% more after buying one time')
-        //         underTest.countClick();
-        //         underTest.purchaseCompanion() * 0.10;
-        //         expect(underTest.getCompanionCount()).toBe(110);
-
-            
-        // });
-
-
+            this.llamaCount -= this.priceMultiplier.toFixed(0);
+            this.priceMultiplier *= this.multiplierPricePercentage;
+            this.multiplierPricePercentage += 0.1;
+            return this.multiplier;
+        }
+        return this.multiplier
+    }
+}
        
