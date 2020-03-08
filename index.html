@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang='en'>
+
 <head>
     <meta charset='UTF-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
@@ -9,29 +10,46 @@
 </head>
 
 
-<header>
-    <h1>Welcome To The Llama Clicker</h1>
-
-    <div class='topnav'>
-        <a href='#' onClick='openAlert()'><h3>Company Info</h3>
-        <a href='http://orteil.dashnet.org/cookieclicker/' target='_blank'><h3>Click here to see where we got our inspiration</h3></a>
-        <a href='#' onClick='save()'>Save</a>
-        <a href='#' onClick='load()'>Load</a>
-        <a href='#' onClick='reset()'>Reset</a>
-      </div>
-      
-</header>
-
-
 <body>
 
+
+    <header>
+        <div class='title'>
+            <h1>Welcome To The Llama Clicker</h1>
+        </div>
+
+        <div class='topnav'>
+            <ul>
+                <li><a href='#' class="trigger">Developer Info</a></li>
+                <div class="modal">
+                    <div class="modal-container">
+                        <span class="close-button">x</span>
+                        <h3>
+                            <p>My name is Daniel, I grew up in Venezuela
+                                where after turning 19 decided to move back to the US and embarc in my journey to become a Software Developer.</p>
+                                You can find more information about me <a href="https://danielvillasmil.github.io/">here</a></p>
+                        </h3>
+                    </div>
+                </div>
+                <li><a href='#' onClick='openAlert()'>Company Info</a>
+                <li><a href='http://orteil.dashnet.org/cookieclicker/' target='_blank'>Our inspiration</a></button></li>
+                <li><a href='#' onClick='save()'>Save</a></li>
+                <li><a href='#' onClick='load()'>Load</a></li>
+                <li><a href='#' onClick='reset()'>Reset</a></li>
+            </ul>
+        </div>
+
+    </header>
+
+
+
     <div class='container'>
-        <div class='container__image__left'> 
+        <div class='container__image__left'>
             <h1 id='llama'>0</h1>
             <p id='llamasPerSecond'>0 llamas per second</p>
-            <h2>Llamas bought</h2> 
-                <a href= '#' onClick='countClick()'><img src='./src/img/giphy.gif'  alt='this is a gif of a llama changing colors while jumping' width='300px' height='auto'></a> 
-            </div>
+            <h2>Llamas bought</h2>
+            <a href= '#' onClick='countClick()'><img src='./src/img/giphy.gif'  alt='this is a gif of a llama changing colors while jumping' width='300px' height='auto'></a>
+        </div>
     </div>
 
     <div class='container__center'>
@@ -41,19 +59,38 @@
             <a href='#' onClick='buyMultiplier()'>
                 <img src='./src/img/Powerupicon.png' alt='this is a upward yellow arrow' width='50px' height='auto'>
             </a>
-            <p id='currentMultiplier'>You current multiplier is x1</p> 
+            <p id='currentMultiplier'>You current multiplier is x1</p>
         </div>
 
         <div class='first_companion'>
             <h2>Click Companion</h2>
             <p id='costCompanion'>Cost: 100 llamas</p>
-                <a href="#" onClick='clickCompanion()'><img src='./src/img/grasss.png' alt='this is a grass image' width='100px' height='auto'></a>
+            <a href='#' onClick='clickCompanion()'><img src='./src/img/grasss.png' alt='this is a grass image' width='100px' height='auto'></a>
             <p id='autoClickAmount'>You have 0 grass</p>
         </div>
     </div>
-    
+
+
+    <footer>
+        <div class="social__media">
+            <div class="github" id="git">
+                <a href="https://github.com/DanielVillasmil" target="_blank">
+                 <img src='/src/img/Github-icon.png' alt='This is a GitHub logo' width="50" height="auto"></a>
+            </div>
+
+            <div class="linkedin" id="link">
+                <a href="https://www.linkedin.com/in/danielvillasmil/" target="_blank">
+                    <img alt='This is a linkedIn logo' src="/src/img/LinkedIn2.png" width="50" height="auto">
+                </a>
+            </div>
+    </footer>
+
+
     <script src='/src/js/app.js'></script>
 
 
+
+
 </body>
+
 </html>

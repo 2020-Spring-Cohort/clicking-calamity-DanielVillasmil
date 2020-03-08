@@ -1,49 +1,30 @@
-class ClickCounter {
-    llamaCount = 0;
-    autoClick = 0;
-    multiplier = 1.0;
-    companionCost = 100;
-    priceMultiplier = 10;
-    multiplierPricePercentage = 1.1;
-    multiplierCount = 0;
+class clickCounter {
+    constructor() {
+        this.clickCount = 0;
+        this.companionCount = 0;
+        this.companionCost = 100;
+    }
+    countClick() {
+        this.clickCount++;
+    }
+    getCompanionCount() {
+        return 0;
+    }
+    getCompanionCount() {
+        return this.companionCount;
+    }
 
-    increaseClickCount() {
-        this.llamaCount += this.multiplier;
-        return this.llamaCount;
-    }
-    autoClicks() {
-        for (let i = 0; i < this.autoClick; i++) {
-            this.increaseClickCount();
+    purchaseCompanion() {
+        if (this.clickCount >= 100) {
+            this.clickCount -= 100;
+            this.companionCount++;
         }
+
     }
-    increaseAutoClicks() {
-        if (this.llamaCount >= this.companionCost.toFixed(0)) {
-            this.autoClick++;
-            this.llamaCount -= this.companionCost;
-            this.companionCost *= 1.1 + (0.1 * (this.autoClick - 1));
-            return this.autoClick
-        } else {
-            return this.autoClick
+    companionCost() {
+        if (clickcount >= companionCost) {
+            clickcount = clickcount - companionCost;
+            companionCost += Math.floor((companionCost * .10));
         }
-    }
-    increaseMultiplier() {
-        if (this.llamaCount >= this.priceMultiplier.toFixed(0)) {
-            this.multiplierCount++;
-            if (this.multiplier === 1.0) {
-                this.multiplier += 0.2;
-            } else {
-                this.multiplier = Math.pow(1.2, this.multiplierCount);
-            }
-            this.llamaCount -= this.priceMultiplier.toFixed(0);
-            this.priceMultiplier *= this.multiplierPricePercentage;
-            this.multiplierPricePercentage += 0.1;
-            return this.multiplier;
-        }
-        return this.multiplier
     }
 }
-       
-
-
-
-

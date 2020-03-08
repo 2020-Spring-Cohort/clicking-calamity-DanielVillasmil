@@ -1,4 +1,3 @@
-
 let autoClick = 0;
 let collectiveCompaunderClick = 0;
 let multiplier = 1.2;
@@ -52,6 +51,7 @@ function clickCompanion() {
         update();
     }
 }
+
 function timer() {
     llamaCount = llamaCount + autoClick;
     llamaCount = llamaCount + collectiveCompaunderClick;
@@ -72,6 +72,24 @@ function buyMultiplier() {
     }
 }
 
-function openAlert(){
+function openAlert() {
     alert("Coo Coo Computing Challengers: We are a company who focuses on making click based games. Which are perfect for unwinding from a long day or just waiting for your flight to board.");
 }
+
+const modal = document.querySelector(".modal");
+const trigger = document.querySelector(".trigger");
+const closeButton = document.querySelector(".close-button");
+
+function toggleModal() {
+    modal.classList.toggle("show-modal");
+}
+
+function windowOnClick(event) {
+    if (event.target === modal) {
+        toggleModal();
+    }
+}
+
+trigger.addEventListener("click", toggleModal);
+closeButton.addEventListener("click", toggleModal);
+window.addEventListener("click", windowOnClick);
