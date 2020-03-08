@@ -20,18 +20,24 @@
 
         <div class='topnav'>
             <ul>
-                <li><a href='#' class="trigger">Developer Info</a></li>
-                <div class="modal">
-                    <div class="modal-container">
-                        <span class="close-button">x</span>
+                <li><a href='#' class='trigger'>Developer Info</a></li>
+                <div class='modal'>
+                    <div class='modal-container'>
+                        <span class='close-button'>x</span>
                         <h3>
                             <p>My name is Daniel, I grew up in Venezuela
                                 where after turning 19 decided to move back to the US and embarc in my journey to become a Software Developer.</p>
-                                You can find more information about me <a href="https://danielvillasmil.github.io/">here</a></p>
+                                You can find more information about me <a href='https://danielvillasmil.github.io/'>here</a></p>
                         </h3>
                     </div>
                 </div>
-                <li><a href='#' onClick='openAlert()'>Company Info</a>
+                <li class="dropdown"><a href='#'>Company Info</a>
+                    <ul class="dropdownInfo">
+                        <p>
+                            We are a company which focuses on making fun webgames where you can access it while bored at work or waiting for your flight to board.
+                        </p>
+                    </ul>
+                </li>
                 <li><a href='http://orteil.dashnet.org/cookieclicker/' target='_blank'>Our inspiration</a></button></li>
                 <li><a href='#' onClick='save()'>Save</a></li>
                 <li><a href='#' onClick='load()'>Load</a></li>
@@ -72,15 +78,15 @@
 
 
     <footer>
-        <div class="social__media">
-            <div class="github" id="git">
-                <a href="https://github.com/DanielVillasmil" target="_blank">
-                 <img src='/src/img/Github-icon.png' alt='This is a GitHub logo' width="50" height="auto"></a>
+        <div class='social__media'>
+            <div class='github' id='git'>
+                <a href='https://github.com/DanielVillasmil' target='_blank'>
+                 <img src='/src/img/Github-icon.png' alt='This is a GitHub logo' width='50' height='auto'></a>
             </div>
 
-            <div class="linkedin" id="link">
-                <a href="https://www.linkedin.com/in/danielvillasmil/" target="_blank">
-                    <img alt='This is a linkedIn logo' src="/src/img/LinkedIn2.png" width="50" height="auto">
+            <div class='linkedin' id='link'>
+                <a href='https://www.linkedin.com/in/danielvillasmil/' target='_blank'>
+                    <img alt='This is a linkedIn logo' src='/src/img/LinkedIn2.png' width='50' height='auto'>
                 </a>
             </div>
     </footer>

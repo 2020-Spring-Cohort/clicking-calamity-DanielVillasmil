@@ -73,15 +73,15 @@ function buyMultiplier() {
 }
 
 function openAlert() {
-    alert("Coo Coo Computing Challengers: We are a company who focuses on making click based games. Which are perfect for unwinding from a long day or just waiting for your flight to board.");
+    alert('Coo Coo Computing Challengers: We are a company who focuses on making click based games. Which are perfect for unwinding from a long day or just waiting for your flight to board.');
 }
 
-const modal = document.querySelector(".modal");
-const trigger = document.querySelector(".trigger");
-const closeButton = document.querySelector(".close-button");
+const modal = document.querySelector('.modal');
+const trigger = document.querySelector('.trigger');
+const closeButton = document.querySelector('.close-button');
 
 function toggleModal() {
-    modal.classList.toggle("show-modal");
+    modal.classList.toggle('show-modal');
 }
 
 function windowOnClick(event) {
@@ -90,6 +90,6 @@ function windowOnClick(event) {
     }
 }
 
-trigger.addEventListener("click", toggleModal);
-closeButton.addEventListener("click", toggleModal);
-window.addEventListener("click", windowOnClick);
+trigger.addEventListener('click', toggleModal);
+closeButton.addEventListener('click', toggleModal);
+window.addEventListener('click', windowOnClick);

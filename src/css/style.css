@@ -1,6 +1,5 @@
 * {
     font-family: sans-serif;
-
 }
 
 ul {
@@ -26,4 +25,25 @@ footer {
     grid-row: 3;
     grid-column: 2;
 
+}
+
+.dropdown p {
+
+    background: rgb(74, 117, 146);
+}
+
+li a {
+
+    color: rgb(255, 255, 255);
+}
+
+li ul.dropdownInfo {
+
+    background: rgb(74, 117, 146);
+
+}
+
+li ul.dropdownInfo p {
+    color: white;
+    font-weight: 200;
 }
