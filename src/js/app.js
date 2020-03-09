@@ -72,10 +72,6 @@ function buyMultiplier() {
     }
 }
 
-function openAlert() {
-    alert('Coo Coo Computing Challengers: We are a company who focuses on making click based games. Which are perfect for unwinding from a long day or just waiting for your flight to board.');
-}
-
 const modal = document.querySelector('.modal');
 const trigger = document.querySelector('.trigger');
 const closeButton = document.querySelector('.close-button');
